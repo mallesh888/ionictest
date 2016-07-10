@@ -1,0 +1,28 @@
+<ion-view view-title="Ionic Extensions">
+    <ion-content class="im-wrapper">
+    <h1>Examples</h1>
+    <div class="row">
+    	<div class="col col-100">
+    		<div>Select an image file: <input type="file" id="fileInput" /></div>
+		  	<div class="cropArea">
+		    	<img-crop image="myImage" result-image="myCroppedImage"></img-crop>
+		  	</div>
+		  	<div>Cropped Image:</div>
+ 			<div>
+ 				<img ng-src="{{myCroppedImage}}" />
+ 			</div>
+    	</div>
+    </div> <!-- end row -->
+
+    <div class="row">
+    	<div class="col col-100">
+    		<h3>Rating</h3>
+			<div ng-init="rating = star.rating + 1"></div>
+			<div class="star-rating" star-rating rating-value="rating"
+			data-max="10" on-rating-selected="rateFunction(rating)">
+			</div>
+    	</div>
+    </div>
+    
+    </ion-content>
+</ion-view>
